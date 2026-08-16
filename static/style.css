@@ -1,0 +1,184 @@
+/* Selects every element on the page */
+* {
+    /* Makes width and height easier to control */
+    box-sizing: border-box;
+}
+/* Styles the entire webpage */
+body {
+    /* Removes the default space around the webpage */
+    margin: 0;
+    /* Sets the font used throughout the website */
+    font-family: Arial, sans-serif;
+    /* Very light blue background */
+    background-color: #f4f8fb;
+    /* Default text color - dark gray instead of pure black */
+    color: #1f2937;
+}
+header {
+    /* White background for the top area */
+    background-color: white;
+    /* Space inside the header */
+    padding: 20px;
+    /* Small shadow below the header */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.navbar {
+    /* Places heading and links in a row */
+    display: flex;
+    /* Aligns everything vertically */
+    align-items: center;
+    /* Adds space between items */
+    gap: 25px;
+    /* Allows items to move to next line on small screens */
+    flex-wrap: wrap;
+}
+
+/* Main website heading */
+.navbar h1 {
+    /* Removes default margin */
+    margin: 0;
+
+    /* Makes the heading take available space */
+    flex: 1;
+
+    /* Medical blue color */
+    color: #1565c0;
+
+    /* Size of heading */
+    font-size: 28px;
+}
+/* Navigation links */
+.navbar a {
+    /* Removes underline */
+    text-decoration: none;
+
+    /* Blue text */
+    color: #1565c0;
+
+    /* Makes links slightly bold */
+    font-weight: bold;
+}
+/* When mouse is placed over a link */
+.navbar a:hover {
+    /* Changes link color */
+    color: #0d47a1;
+}
+.description {
+    /* Centers the description */
+    text-align: center;
+    /* Gray-blue text */
+    color: #607d8b;
+    /* Adds some space above */
+    margin-top: 15px;
+}
+main {
+    /* Maximum width of the content */
+    max-width: 1000px;
+    /* Centers the main content */
+    margin: 30px auto;
+    /* Space on left and right */
+    padding: 0 20px;
+}
+section {
+    /* White background for each section */
+    background-color: white;
+    /* Space inside each section */
+    padding: 25px;
+    /* Space between sections */
+    margin-bottom: 25px;
+    /* Rounded corners */
+    border-radius: 10px;
+    /* Light border */
+    border: 1px solid #dbe7ef;
+    /* Small shadow */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+/* Section headings */
+section h2 {
+    /* Medical blue */
+    color: #1565c0;
+    /* Removes unnecessary top space */
+    margin-top: 0;
+}
+.upload-form {
+    /* Arranges form elements vertically */
+    display: flex;
+    flex-direction: column;
+    /* Space between form elements */
+    gap: 12px;
+}
+/* File input */
+input[type="file"] {
+    /* Adds space inside the input */
+    padding: 10px;
+    /* Light border */
+    border: 1px solid #b0bec5;
+    /* Rounded corners */
+    border-radius: 6px;
+    /* White background */
+    background-color: white;
+}
+.analyze-button {
+    /* Blue medical-style button */
+    background-color: #1976d2;
+    /* White text */
+    color: white;
+    /* Removes default border */
+    border: none;
+    /* Space inside button */
+    padding: 12px 20px;
+    /* Rounded corners */
+    border-radius: 6px;
+    /* Makes text slightly bold */
+    font-weight: bold;
+    /* Changes mouse cursor to pointer */
+    cursor: pointer;
+    /* Button size */
+    font-size: 16px;
+}
+/* Button when mouse is placed over it */
+.analyze-button:hover {
+    /* Darker blue */
+    background-color: #0d47a1;
+}
+.supported-formats ul {
+    /* Gives space before the list */
+    padding-left: 25px;
+}
+.supported-formats li {
+    /* Space between each format */
+    margin-bottom: 8px;
+}
+.how-it-works li {
+    /* Adds space between steps */
+    margin-bottom: 10px;
+}
+.footer {
+    /* White footer */
+    background-color: white;
+    /* Centers the text */
+    text-align: center;
+    /* Space inside footer */
+    padding: 20px;
+    /* Light top border */
+    border-top: 1px solid #dbe7ef;
+    /* Gray text */
+    color: #607d8b;
+    /* Smaller text */
+    font-size: 14px;
+}
+/* This applies when screen width is 600px or less */
+@media (max-width: 600px) {
+    /* Makes heading smaller on mobile */
+    .navbar h1 {
+        font-size: 22px;
+    }
+    /* Makes navigation links easier to see */
+    .navbar {
+        gap: 15px;
+    }
+    /* Reduces section spacing on small screens */
+    section {
+        padding: 18px;
+    }
+}
