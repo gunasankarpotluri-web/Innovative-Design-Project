@@ -30,10 +30,26 @@
             <form class="upload-form">
                 <label for="medicalImage">Choose Medical Image</label>
                 <input type="file" id="medicalImage" accept="image/*" required>
-                <br>
                 <button class="analyze-button" type="submit">Analyze Image</button>
             </form>
         </section>
+
+        <div class="image-preview-popup" id="imagePreviewPopup">
+
+    <div class="preview-content">
+
+        <h2>Confirm Medical Image</h2>
+
+        <img id="previewImage" src="" alt="Selected medical image">
+
+        <div class="preview-buttons">
+            <button id="confirmImage" type="button">Confirm</button>
+            <button id="closePreview" type="button">Close</button>
+        </div>
+
+    </div>
+
+</div>
 
         <section class="supported-formats">
             <h2>Supported Image Formats</h2>
@@ -57,8 +73,10 @@
 
     <footer class="footer">
         <p>This application is intended for research and educational purposes only and uses Artificial Intelligence and Machine Learning technologies.</p>
-
     </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
 </body>
 
 </html>
