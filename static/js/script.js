@@ -18,6 +18,16 @@ closePreview.addEventListener("click", function () {
 
 confirmImage.addEventListener("click", function () {
     console.log("Image confirmed!");
-    console.log("Selected file:", selectedFile);
-    console.log("File name:", selectedFile.name);
+    const formData = new FormData();
+    formData.append("image", selectedFile);
+
+    fetch("/analyze", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        console.log(data);
+    });
+
 });
